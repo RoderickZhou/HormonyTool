@@ -19,6 +19,7 @@ struct Index {
         .onClick(() => {
           this.message = 'Welcome';
           this.count++;
+          //累积计数
         })
     }
     .height('100%')
