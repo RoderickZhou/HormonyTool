@@ -1,13 +1,10 @@
 @Entry
 @Component
 struct Index {
-  @State message: string = 'Hello World';
   @State count: number = 0;
 
   build() {
     RelativeContainer() {
-      Text(this.message)
-        .id('HelloWorld')
       Text(`Count: ${this.count}`)
         .id('CounterText')
         .fontSize($r('app.float.page_text_font_size'))
@@ -17,7 +14,6 @@ struct Index {
           middle: { anchor: '__container__', align: HorizontalAlign.Center }
         })
         .onClick(() => {
-          this.message = 'Welcome';
           this.count++;
         })
     }
